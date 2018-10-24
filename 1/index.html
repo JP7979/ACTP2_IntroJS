@@ -4,14 +4,45 @@ cargado el DOM y otra después que las imágenes se hayan cargado.
 Tip: Investigar el evento window.onload
 
 -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>toggleClass demo</title>
+  <style>
+  p {
+    margin: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .blue {
+    color: blue;
+  }
+  .highlight {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p class="blue">HOME</p>
+<p class="blue highlight">nostros</p>
+<p class="blue">nostros</p>
+<p class="blue">nostros</p>
+ 
+<script>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+//$( "p" ).hover(function() {
+  //$( this ).toggleClass( "highlight" );
+//});
 
-  </body>
+  $( "body" ).on('mouseover mouseleave', 'p', function() {
+    $( this ).toggleClass( "highlight" );
+});
+
+</script>
+ 
+</body>
 </html>
